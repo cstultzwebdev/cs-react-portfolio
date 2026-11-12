@@ -1,5 +1,15 @@
 export const projects = [
   {
+    title: 'Fretboard Atlas',
+    description:
+      'An interactive guitar fretboard for learning theory. Explore every note on the neck, keys, intervals, scales, modes and the five CAGED chord positions, with a quiz mode and sound.',
+    image: '/images/fretboard-atlas.png',
+    tags: ['React', 'Vite', 'Web Audio API'],
+    source: 'https://fretboard-atlas.netlify.app/',
+    visit: 'https://github.com/cstultzwebdev/fretboard-atlas',
+    id: 6,
+  },
+  {
     title: 'Not Spotify',
     description:
       'This React project uses the Shazam API for a Web App that allows the user to look up top music charts based on location, play music by a given artist.',
@@ -59,22 +69,14 @@ export const projects = [
     visit: 'https://github.com/Stultz-e/forkify-cs',
     id: 5,
   },
-  {
-    title: 'Fretboard Atlas',
-    description:
-      'An interactive guitar fretboard for learning theory. Explore every note on the neck, keys, intervals, scales, modes and the five CAGED chord positions, with a quiz mode and sound.',
-    image: '/images/fretboard-atlas.png',
-    tags: ['React', 'Vite', 'Web Audio API'],
-    source: 'https://fretboard-atlas.netlify.app/',
-    visit: 'https://github.com/cstultzwebdev/fretboard-atlas',
-    id: 6,
-  },
 ];
 
 export const TimeLineData = [
-  { year: 2016, text: 'Heart of Gold: Graphic Designer' },
-  { year: 2017, text: '365 Connect: UX/UI Designer' },
-  { year: 2018, text: 'GoodWork: Web Developer' },
-  { year: 2019, text: 'Pinnacle Design Lab: UX/UI Designer' },
+  { year: 2023, text: 'Utah Dept. of Health & Human Services: UI Engineer' },
+  { year: 2023, text: 'Smith Johnson Tech: Frontend Web Developer' },
+  { year: 2023, text: 'Kincaid Information Technology: Web Developer' },
   { year: 2020, text: 'Pinnacle Design Lab: Frontend Developer' },
+  { year: 2019, text: 'Good Work Marketing: Frontend Developer' },
+  { year: 2017, text: '365 Connect: UX & Product Designer' },
+  { year: 2016, text: 'Heart of Gold SF: Web Designer' },
 ];

@@ -1,154 +1,105 @@
+import styled from 'styled-components';
 
-import styled from 'styled-components'
+// Vertical timeline: a line down the left, one dot per role.
+export const TimelineList = styled.ol`
+  position: relative;
+  max-width: 720px;
+  list-style: none;
+  margin: 0 0 80px;
+  padding: 0 0 0 32px;
 
-export const CarouselContainer = styled.ul`
-  max-width: 1040px;
-  background: #0F1624;
-  padding: 0rem;
-  list-style:none;
-  display: flex;
-  justify-content: space-between; 
-  /* overflow-x: hidden; */
-
-  margin-left: 32px;
-  &:first-of-type{
-    margin-left: 0px;
+  // The vertical line, fading out at the bottom
+  &::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 5px;
+    width: 2px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
   }
 
-  margin-bottom: 80px;
-
-  //remove scrollbar
-  scrollbar-width: none;  
-   &::-webkit-scrollbar {
-     display: none;
-   }
-
-  @media ${props => props.theme.breakpoints.sm} {
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    touch-action: pan-x;
-    justify-content: initial;
-    margin-bottom: 8px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding-left: 28px;
+    margin-bottom: 48px;
   }
-`
-export const CarouselMobileScrollNode = styled.div`
-  @media ${props => props.theme.breakpoints.sm} {
-    display: flex;
-    min-width: ${({ final }) => final ? `120%;` : `min-content`}
-  }
-`
+`;
 
-export const CarouselItem = styled.div`
-  background: #0F1624;
-  border-radius: 3px;
-  max-width: 196px;
+export const TimelineItem = styled.li`
+  position: relative;
+  padding-bottom: 32px;
 
-  @media ${props => props.theme.breakpoints.md} {
-    max-width: 124px;
+  &:last-child {
+    padding-bottom: 0;
   }
-  
-  @media ${props => props.theme.breakpoints.sm} {
-    margin-left: 32px;
-    min-width: 120px;
-    background: #0E131F;
-    padding: 4px;
-    align-content: start;
-    scroll-snap-align: start;
-    border-radius: 3px;
-    overflow: visible;
-    position: relative;
-    height: fit-content;
-    
-    ${(props) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`}; 
-  }
-`
 
-export const CarouselItemTitle = styled.h4`
+  // The dot that sits on the line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: -32px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
+    box-shadow: 0 0 0 4px #0f1624;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding-bottom: 24px;
+
+    &::before {
+      left: -28px;
+      top: 6px;
+    }
+  }
+`;
+
+export const TimelineYear = styled.h4`
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0.02em;
-  display: flex;
-  /* This gradient is different due to the size of the Title container, it must transition sooner to be visible on the text */
-  background: linear-gradient(121.57deg, #FFFFFF 10%, rgba(255, 255, 255, 0.66) 30.15%);
+  background: linear-gradient(
+    121.57deg,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0.66) 60%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 
-  @media ${props => props.theme.breakpoints.md} {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 4px;
-  }
-  
-  @media ${props => props.theme.breakpoints.sm} {
-    font-size: 16px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 18px;
     line-height: 24px;
   }
-`
-export const CarouselItemImg = styled.svg`
-  margin-left: 21px;
-  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
-  width: 100%;
+`;
 
-  @media ${props => props.theme.breakpoints.sm} {
-    -webkit-mask-image: none;
-    margin-left: 16px;
-    overflow: visible;
+export const TimelineRole = styled.p`
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 15px;
+    line-height: 22px;
   }
-`
+`;
 
-export const CarouselItemText = styled.p`
-  font-size: 14px;
+export const TimelineCompany = styled.p`
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.75);
-  padding-right: 16px;
+  color: rgba(255, 255, 255, 0.6);
 
-  @media ${props => props.theme.breakpoints.md} {
-    font-size: 12px;
-    line-height: 18px;
-    padding-right: 32px;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 13px;
+    line-height: 20px;
   }
-  @media ${props => props.theme.breakpoints.sm} {
-    font-size: 10px;
-    line-height: 16px;
-    padding-right: 0;
-  }
-`
-export const CarouselButtons = styled.div`
-  width: 288px;
-
-  display: none;
-  visibility: hidden;
-
-  @media ${props => props.theme.breakpoints.sm} {
-    display: flex;
-    visibility: visible;
-    margin-bottom: 48px;
-  }
-`
-
-export const CarouselButton = styled.button`
-  box-sizing: border-box;
-  background: none;
-  padding: 4px;
-  border: none;
-  cursor: pointer;
-  margin-right: 4px;
-  opacity: ${(props) => props.active === props.index ? `1` : `.33`};
-  transform: ${(props) => props.active === props.index ? `scale(1.6)` : `scale(1)`};
-
-  &:focus {
-    outline: none;
-  }
-`
-
-export const CarouselButtonDot = styled.div`
-  background-color: white;
-  border-radius: 10px;
-  margin: auto;
-  width: 3px;
-  height: 3px;
-`
+`;
