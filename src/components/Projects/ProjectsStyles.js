@@ -25,8 +25,11 @@ export const ImgPlaceholder = styled.div`
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  // Every row is as tall as the tallest card, so all cards match in height
+  grid-auto-rows: 1fr;
   padding: 3rem;
-  place-items: center;
+  justify-items: center;
+  align-items: stretch;
   column-gap: 2rem;
   row-gap: 3rem;
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -40,6 +43,10 @@ export const BlogCard = styled.div`
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   width: 400px;
+  // Column layout so the description can grow and the stack + buttons
+  // line up along the bottom of every card
+  display: flex;
+  flex-direction: column;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -86,6 +93,7 @@ export const CardInfo = styled.p`
   font-style: 2rem;
   line-height: 24px;
   margin-bottom: 2rem;
+  flex-grow: 1;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 3rem;
   }
@@ -113,7 +121,9 @@ export const ExternalLinks = styled.a`
 
 export const TagList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 1rem 1.5rem;
   padding: 2rem;
 `;
 export const Tag = styled.li`

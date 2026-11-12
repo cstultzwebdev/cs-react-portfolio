@@ -7,7 +7,27 @@ export const projects = [
     tags: ['React', 'Vite', 'Web Audio API'],
     source: 'https://fretboard-atlas.netlify.app/',
     visit: 'https://github.com/cstultzwebdev/fretboard-atlas',
-    id: 6,
+    id: 0,
+  },
+  {
+    title: 'BJJ DB',
+    description:
+      'Reference sheets for no-gi jiu-jitsu guards, passing, wrestling and judo. Each technique card covers what it does, how it works and how to tell it apart from its nearest neighbor, with linked video clips.',
+    image: '/images/bjj-db.png',
+    tags: ['React', 'TypeScript', 'Vite', 'Netlify'],
+    source: 'https://bjj-db.netlify.app/',
+    visit: 'https://github.com/cstultzwebdev/bjj-db',
+    id: 1,
+  },
+  {
+    title: 'Find My Rep',
+    description:
+      'Type an address or share your location to see who represents you in Congress and your state legislature, with phone numbers and ways to contact them. The API key stays in a serverless function and your location is never stored.',
+    image: '/images/findmyrep.png',
+    tags: ['React', 'TypeScript', 'MUI', 'Netlify Functions', 'OpenStates'],
+    // No live URL yet: the View Site button stays hidden until `source` is set.
+    visit: 'https://github.com/cstultzwebdev/FindMyRep',
+    id: 2,
   },
   {
     title: 'Not Spotify',
@@ -17,7 +37,7 @@ export const projects = [
     tags: ['React', 'Redux', 'Axios', 'Tailwind', 'Shazam API'],
     source: 'https://notspotifyclone.netlify.app',
     visit: 'https://github.com/Stultz-e/NotSpotify',
-    id: 0,
+    id: 3,
   },
   {
     title: 'Not Youtube',
@@ -27,7 +47,7 @@ export const projects = [
     tags: ['React', 'Material UI', 'Axios', 'React Player'],
     source: 'https://reactyoutubeproject.netlify.app',
     visit: 'https://github.com/Stultz-e/NotYoutube',
-    id: 1,
+    id: 4,
   },
   {
     title: 'Realtor',
@@ -37,7 +57,7 @@ export const projects = [
     tags: ['NextJS', 'ChakraUI', 'RapidAPI'],
     source: 'https://realestate-next-stultz-e.vercel.app',
     visit: 'https://github.com/Stultz-e/realestate_next',
-    id: 2,
+    id: 5,
   },
   {
     title: 'Crypto Stats',
@@ -47,7 +67,7 @@ export const projects = [
     tags: ['React', 'Redux', 'Ant Design', 'Chart.js'],
     source: 'https://cscryptoapi.netlify.app',
     visit: 'https://github.com/Stultz-e/CryptoNewz',
-    id: 3,
+    id: 6,
   },
   {
     title: 'Mapty',
@@ -57,7 +77,7 @@ export const projects = [
     tags: ['JS', 'localStorage', 'Leaflet'],
     source: 'https://promisesinpractice.netlify.app/',
     visit: 'https://github.com/Stultz-e/mapty',
-    id: 4,
+    id: 7,
   },
   {
     title: 'Forkify',
@@ -67,7 +87,7 @@ export const projects = [
     tags: ['JS'],
     source: 'https://forkify-cs.netlify.app/',
     visit: 'https://github.com/Stultz-e/forkify-cs',
-    id: 5,
+    id: 8,
   },
 ];
 

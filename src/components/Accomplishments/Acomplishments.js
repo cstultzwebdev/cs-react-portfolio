@@ -11,7 +11,7 @@ const data = [
   { degree: 'Psychology Degree', text: "Bachelor's Degree " },
   { degree: 'Human Computer Interaction', text: 'Graduate Degree' },
   { number: 8, text: 'High traffic sites' },
-  { number: 4, text: 'Years of experience' },
+  { number: 8, text: 'Years of experience' },
 ];
 
 const Accomplishments = () => (
