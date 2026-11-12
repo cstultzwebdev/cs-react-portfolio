@@ -1,9 +1,0 @@
-# `next build` with `output: 'export'` (next.config.js) writes the static
-# site to /out. Next 16 needs Node 20.9+, so pin it rather than relying on
-# whatever Node version the Netlify site was created with.
-[build]
-  command = "npm run build"
-  publish = "out"
-
-[build.environment]
-  NODE_VERSION = "22"
