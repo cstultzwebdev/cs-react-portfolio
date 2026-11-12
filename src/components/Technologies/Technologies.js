@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   DiFirebase,
-  DiHtml53DEffects,
+  DiHtml53dEffects,
   DiPhotoshop,
   DiReact,
   DiZend,
@@ -55,7 +55,7 @@ const Technologies = () => (
       </ListItem>
       <ListItem>
         <picture>
-          <DiHtml53DEffects size='3rem' />
+          <DiHtml53dEffects size='3rem' />
         </picture>
         <ListContainer>
           <ListTitle>UX Research</ListTitle>

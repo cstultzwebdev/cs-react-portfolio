@@ -12,6 +12,7 @@ import {
   TitleContent,
   UtilityList,
   Img,
+  ImgPlaceholder,
 } from './ProjectsStyles';
 import {
   Section,
@@ -28,9 +29,13 @@ const Projects = () => (
       {projects.map(
         ({ title, description, image, tags, source, visit, id }) => (
           <BlogCard key={id}>
-            <Img src={image} />
+            {image ? (
+              <Img src={image} alt={title} />
+            ) : (
+              <ImgPlaceholder aria-hidden='true'>{title}</ImgPlaceholder>
+            )}
             <TitleContent>
-              <HeaderThree title>{title}</HeaderThree>
+              <HeaderThree $title>{title}</HeaderThree>
               <Hr />
             </TitleContent>
             <CardInfo> {description} </CardInfo>
@@ -43,12 +48,15 @@ const Projects = () => (
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks target='_blank' href={visit}>
-                Code
+              {/* `visit` is the GitHub repo, `source` is the live site */}
+              <ExternalLinks target='_blank' rel='noopener noreferrer' href={visit}>
+                View Repo
               </ExternalLinks>
-              <ExternalLinks target='_blank' href={source}>
-                Source
-              </ExternalLinks>
+              {source && (
+                <ExternalLinks target='_blank' rel='noopener noreferrer' href={source}>
+                  View Site
+                </ExternalLinks>
+              )}
             </UtilityList>
           </BlogCard>
         )

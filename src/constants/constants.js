@@ -59,6 +59,16 @@ export const projects = [
     visit: 'https://github.com/Stultz-e/forkify-cs',
     id: 5,
   },
+  {
+    title: 'Fretboard Atlas',
+    description:
+      'An interactive guitar fretboard for learning theory. Explore every note on the neck, keys, intervals, scales, modes and the five CAGED chord positions, with a quiz mode and sound.',
+    image: '/images/fretboard-atlas.png',
+    tags: ['React', 'Vite', 'Web Audio API'],
+    source: 'https://fretboard-atlas.netlify.app/',
+    visit: 'https://github.com/cstultzwebdev/fretboard-atlas',
+    id: 6,
+  },
 ];
 
 export const TimeLineData = [

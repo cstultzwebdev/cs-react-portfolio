@@ -7,6 +7,21 @@ export const Img = styled.img`
   overflow: hidden;
 `;
 
+// Stands in for Img on cards that don't have a screenshot yet.
+export const ImgPlaceholder = styled.div`
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #13adc7 0%, #945dd6 100%);
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+`;
+
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -41,7 +56,7 @@ export const HeaderThree = styled.h3`
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: 0.5rem 0;
-  font-size: ${(props) => (props.title ? '3rem' : '2rem')};
+  font-size: ${(props) => (props.$title ? '3rem' : '2rem')};
 `;
 
 export const Hr = styled.hr`
