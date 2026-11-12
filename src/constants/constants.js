@@ -72,11 +72,9 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2023, text: 'Utah Dept. of Health & Human Services: UI Engineer' },
-  { year: 2023, text: 'Smith Johnson Tech: Frontend Web Developer' },
+  { year: 2026, text: 'Utah Dept. of Health & Human Services: UI Engineer (most recent)' },
   { year: 2023, text: 'Kincaid Information Technology: Web Developer' },
   { year: 2020, text: 'Pinnacle Design Lab: Frontend Developer' },
   { year: 2019, text: 'Good Work Marketing: Frontend Developer' },
   { year: 2017, text: '365 Connect: UX & Product Designer' },
-  { year: 2016, text: 'Heart of Gold SF: Web Designer' },
 ];
