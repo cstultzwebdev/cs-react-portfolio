@@ -71,10 +71,12 @@ export const projects = [
   },
 ];
 
+// start/end are the years you started and left each job.
+// Leave out `end` for a job you're still in and it shows "Present".
 export const TimeLineData = [
-  { year: 2026, text: 'Utah Dept. of Health & Human Services: UI Engineer (most recent)' },
-  { year: 2023, text: 'Kincaid Information Technology: Web Developer' },
-  { year: 2020, text: 'Pinnacle Design Lab: Frontend Developer' },
-  { year: 2019, text: 'Good Work Marketing: Frontend Developer' },
-  { year: 2017, text: '365 Connect: UX & Product Designer' },
+  { start: 2023, end: 2026, text: 'Utah Dept. of Health & Human Services: UI Engineer (most recent)' },
+  { start: 2023, end: 2023, text: 'Kincaid Information Technology: Web Developer' },
+  { start: 2020, end: 2022, text: 'Pinnacle Design Lab: Frontend Developer' },
+  { start: 2019, end: 2020, text: 'Good Work Marketing: Frontend Developer' },
+  { start: 2017, end: 2019, text: '365 Connect: UX & Product Designer' },
 ];

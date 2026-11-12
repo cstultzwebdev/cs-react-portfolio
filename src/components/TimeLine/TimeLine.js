@@ -24,6 +24,13 @@ const splitText = (text) => {
     : { company: text.slice(0, i), role: text.slice(i + 2) };
 };
 
+// "2020 – 2022"; a single year when a job started and ended the same year;
+// "2024 – Present" when there's no end year.
+const formatYears = ({ start, end }) => {
+  if (end === undefined) return `${start} – Present`;
+  return start === end ? `${start}` : `${start} – ${end}`;
+};
+
 const Timeline = () => (
   <Section id='about'>
     <SectionTitle>About Me</SectionTitle>
@@ -37,7 +44,7 @@ const Timeline = () => (
         const { company, role } = splitText(item.text);
         return (
           <TimelineItem key={index}>
-            <TimelineYear>{item.year}</TimelineYear>
+            <TimelineYear>{formatYears(item)}</TimelineYear>
             <TimelineRole>{role}</TimelineRole>
             {company && <TimelineCompany>{company}</TimelineCompany>}
           </TimelineItem>
