@@ -1,0 +1,307 @@
+<!doctype html>
+<!--
+  Source for public/Chris-Stultz-Resume.pdf.
+
+  To update the PDF: edit this file, then either
+    • open it in Chrome → Print (Ctrl+P) → Destination "Save as PDF",
+      Paper "Letter", Margins "Default", untick "Headers and footers", or
+    • run `node resume/build.mjs` (needs Playwright's Chromium installed).
+  Save the result over public/Chris-Stultz-Resume.pdf.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chris Stultz Resume</title>
+    <style>
+      @page {
+        size: Letter;
+        margin: 0.45in 0.6in;
+      }
+      :root {
+        --ink: #1a1a1a;
+        --muted: #555;
+        --accent: #1f4e9e;
+        --rule: #c9d3e3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", "Noto Sans", "Open Sans", Arial, sans-serif;
+        font-size: 9.6pt;
+        line-height: 1.27;
+        color: var(--ink);
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      header {
+        border-bottom: 3px solid var(--accent);
+        padding-bottom: 7pt;
+        margin-bottom: 9pt;
+      }
+      h1 {
+        margin: 0;
+        font-size: 24pt;
+        line-height: 1.1;
+        font-weight: 700;
+      }
+      .headline {
+        margin: 3pt 0 4pt;
+        font-size: 12.5pt;
+        color: var(--accent);
+      }
+      .contact {
+        color: var(--muted);
+        font-size: 9.8pt;
+      }
+      .contact .sep {
+        margin: 0 4pt;
+      }
+      h2 {
+        margin: 8pt 0 3pt;
+        padding-bottom: 2pt;
+        border-bottom: 1px solid var(--rule);
+        font-size: 11.5pt;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+      p {
+        margin: 0;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 10.2em 1fr;
+        column-gap: 6pt;
+        row-gap: 0;
+      }
+      .skills dt {
+        font-weight: 700;
+      }
+      .skills dd {
+        margin: 0;
+      }
+      .job {
+        margin-bottom: 4pt;
+        break-inside: avoid;
+      }
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+      }
+      .job-head .dates {
+        white-space: nowrap;
+        color: var(--muted);
+      }
+      .where {
+        font-style: italic;
+        color: var(--muted);
+      }
+      ul {
+        margin: 1pt 0 0;
+        padding-left: 15pt;
+      }
+      li {
+        margin: 0.5pt 0;
+      }
+      .edu p {
+        margin: 1pt 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Chris Stultz</h1>
+      <p class="headline">
+        Design Engineer | UX/UI Design · Frontend Development · Design Systems
+      </p>
+      <p class="contact">
+        Las Vegas, NV<span class="sep">·</span>(385) 318-6529<span class="sep"
+          >·</span
+        >cstultzwebdev@gmail.com<span class="sep">·</span
+        ><a href="https://www.linkedin.com/in/chrisstultzux/"
+          >linkedin.com/in/chrisstultzux</a
+        ><span class="sep">·</span
+        ><a href="https://chrisstultz.vercel.app">chrisstultz.vercel.app</a>
+      </p>
+    </header>
+
+    <h2>Summary</h2>
+    <p>
+      Design engineer with a Master's in Human-Computer Interaction who designs
+      interfaces and builds them in production code. Spent the last three years
+      at the Utah Department of Health and Human Services building and
+      maintaining the design system for iChart, a data dashboard, from Figma
+      concepts to production Angular components. Experienced with AI tools
+      (Claude, ChatGPT, GitHub Copilot) for speeding up design-to-code work
+      while keeping UI consistent and accessible.
+    </p>
+
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Design engineering:</dt>
+      <dd>
+        Design systems, component libraries, Figma-to-code, accessible
+        components, documentation
+      </dd>
+      <dt>Design:</dt>
+      <dd>
+        UX/UI design, atomic design, wireframing, prototyping, information
+        architecture, usability testing, accessibility (WCAG)
+      </dd>
+      <dt>Frontend:</dt>
+      <dd>
+        Angular, React, Next.js, TypeScript, JavaScript, HTML, CSS/SASS,
+        WordPress
+      </dd>
+      <dt>Design tools:</dt>
+      <dd>Figma, Sketch, Adobe Creative Suite, Axure</dd>
+      <dt>AI tools:</dt>
+      <dd>Claude, ChatGPT, GitHub Copilot</dd>
+      <dt>Workflow:</dt>
+      <dd>Jira, GitHub, GitLab, Asana, Slack</dd>
+    </dl>
+
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span
+          ><strong>Design Engineer</strong> — Utah Department of Health and
+          Human Services</span
+        >
+        <span class="dates">Oct 2023 – Nov 2026</span>
+      </div>
+      <div class="where">Remote · Contract via Smith Johnson Tech</div>
+      <ul>
+        <li>
+          Built and maintained the design system for iChart, a DHHS data
+          dashboard, defining the components, patterns, and standards used
+          across the product
+        </li>
+        <li>
+          Developed UI concepts in Figma and built them as reusable, accessible
+          Angular components
+        </li>
+        <li>
+          Wrote component documentation so developers could ship consistent
+          interfaces at scale
+        </li>
+        <li>
+          Used AI tools (Claude, ChatGPT, GitHub Copilot) to speed up design and
+          development work
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span
+          ><strong>Senior Design Engineer</strong> — Kincaid Information
+          Technology (KIT)</span
+        >
+        <span class="dates">Jan 2023 – Oct 2023</span>
+      </div>
+      <div class="where">Remote</div>
+      <ul>
+        <li>
+          Designed and built the user interface for Admin+, a KIT software
+          product, using Angular and Angular Material
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span><strong>Design Engineer</strong> — Pinnacle Design Lab</span>
+        <span class="dates">Apr 2020 – Jul 2022</span>
+      </div>
+      <div class="where">Work under NDA</div>
+      <ul>
+        <li>
+          Translated Sketch designs into React/TypeScript interfaces alongside
+          the UX/UI designer
+        </li>
+        <li>
+          Built a design system of flexible components that adapt to varied
+          datasets and data structures
+        </li>
+        <li>
+          Designed interfaces in Sketch and built custom SVG animations with
+          Lottie.js
+        </li>
+        <li>
+          Bridged design and development, translating client design needs and
+          technical constraints in both directions
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span
+          ><strong>Design Engineer</strong> — Good Work Marketing, Inc.</span
+        >
+        <span class="dates">Aug 2019 – Apr 2020</span>
+      </div>
+      <div class="where">New Orleans, LA</div>
+      <ul>
+        <li>
+          Built custom WordPress sites for agency clients on a Webpack,
+          SASS/Bootstrap, and PHP stack
+        </li>
+        <li>
+          Delivered sites that non-technical clients could update themselves
+          (news, promotions, events)
+        </li>
+        <li>
+          Kept sites secure and current: updated WordPress versions, replaced
+          deprecated plugins, and removed harmful scripts
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span><strong>Design Engineer</strong> — 365 Connect</span>
+        <span class="dates">Oct 2017 – Aug 2019</span>
+      </div>
+      <div class="where">New Orleans, LA</div>
+      <ul>
+        <li>
+          Sole designer on the redesign of the company's media platform, working
+          directly with the CEO
+        </li>
+        <li>
+          Redesigned the rental application user flow and the public 365 Connect
+          business website
+        </li>
+        <li>
+          Built the site in HTML/CSS/JS and handed it off to the offshore team,
+          translating the CEO's requirements for developers
+        </li>
+        <li>
+          Created social media content and custom illustrations in Photoshop and
+          Illustrator
+        </li>
+      </ul>
+    </div>
+
+    <h2>Education</h2>
+    <div class="edu">
+      <p>
+        <strong>M.A., Human-Computer Interaction</strong> — State University of
+        New York at Oswego
+      </p>
+      <p>
+        <strong>B.A., Psychology</strong> — State University of New York at
+        Oswego
+      </p>
+    </div>
+  </body>
+</html>

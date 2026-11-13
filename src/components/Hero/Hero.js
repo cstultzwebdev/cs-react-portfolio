@@ -12,10 +12,12 @@ const Hero = (props) => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Chris Stultz <br /> Portfolio
+        Chris Stultz <br /> Design Engineer
       </SectionTitle>
       <SectionText>
-        A showcase of relevant technologies I've worked with
+        I design interfaces and build them in production code, from Figma
+        concepts to accessible, reusable components and the design systems
+        behind them.
       </SectionText>
       <ButtonRow>
         <Button

@@ -13,7 +13,16 @@ const Home = () => {
   return (
     <Layout>
       <Head>
-        <title>Chris Stultz | Portfolio</title>
+        <title>Chris Stultz | Design Engineer</title>
+        <meta
+          name='description'
+          content='Chris Stultz is a design engineer who designs interfaces and builds them in production code: UX/UI design, frontend development and design systems.'
+        />
+        <meta property='og:title' content='Chris Stultz | Design Engineer' />
+        <meta
+          property='og:description'
+          content='UX/UI design, frontend development and design systems, from Figma to production.'
+        />
       </Head>
       <Section grid>
         <Hero />

@@ -25,8 +25,9 @@ const Technologies = () => (
     <SectionDivider divider />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      I started with a design background and gradually moved to frontend
-      development. I pride myself on being a multidisciplinary developer
+      I started in design and moved into frontend development. Today I work
+      as a design engineer: I design the experience and build it myself, so
+      nothing gets lost between the mockup and the shipped product.
     </SectionText>
     <List>
       <ListItem>
@@ -36,7 +37,7 @@ const Technologies = () => (
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
-            Experiece with <br />
+            Experience with <br />
             React.js, Next.js, Typescript
           </ListParagraph>
         </ListContainer>
