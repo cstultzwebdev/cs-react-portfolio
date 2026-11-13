@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import Accomplishments from '../components/Accomplishments/Acomplishments';
 import BgAnimation from '../components/BackgrooundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
@@ -10,6 +12,9 @@ import { Section } from '../styles/GlobalComponents';
 const Home = () => {
   return (
     <Layout>
+      <Head>
+        <title>Chris Stultz | Portfolio</title>
+      </Head>
       <Section grid>
         <Hero />
         <BgAnimation />

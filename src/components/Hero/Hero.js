@@ -12,7 +12,7 @@ const Hero = (props) => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Chris Stultz <br /> React Portfolio
+        Chris Stultz <br /> Portfolio
       </SectionTitle>
       <SectionText>
         A showcase of relevant technologies I've worked with

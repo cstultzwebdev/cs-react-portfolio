@@ -25,7 +25,7 @@ export const projects = [
       'Type an address or share your location to see who represents you in Congress and your state legislature, with phone numbers and ways to contact them. The API key stays in a serverless function and your location is never stored.',
     image: '/images/findmyrep.png',
     tags: ['React', 'TypeScript', 'MUI', 'Netlify Functions', 'OpenStates'],
-    // No live URL yet: the View Site button stays hidden until `source` is set.
+    source: 'https://findmyrep-67.netlify.app/',
     visit: 'https://github.com/cstultzwebdev/FindMyRep',
     id: 2,
   },
