@@ -33,7 +33,7 @@ const Footer = () => {
         <CompanyContainer>
           <Slogan>Frontend Developer and UX/UI Designer</Slogan>
         </CompanyContainer>
-        <SocialIcons href='https://github.com/Stultz-e' target='_blank'>
+        <SocialIcons href='https://github.com/cstultzwebdev' target='_blank'>
           <AiFillGithub size='3rem' />
         </SocialIcons>
         <SocialIcons href='https://www.linkedin.com/in/chrisstultzux/' target='_blank'>
