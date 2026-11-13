@@ -1,15 +1,64 @@
 import styled from 'styled-components';
 
-// Puts the hero buttons side by side, wrapping to a column on narrow screens
+// Resume and Other Work sit side by side on one row at every screen size,
+// so both buttons share one width/height that steps down on smaller screens.
 export const ButtonRow = styled.div`
   display: flex;
-  flex-wrap: wrap;
   gap: 1.6rem;
   margin-bottom: 80px;
 
-  // The row owns the spacing below the hero, not each button
-  & > div {
+  && > * {
+    width: 200px;
+    height: 60px;
     margin: 0;
+  }
+  && button,
+  && > a {
+    font-size: 2.2rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    && > * {
+      width: 170px;
+      height: 52px;
+    }
+    && button,
+    && > a {
+      font-size: 1.9rem;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    gap: 1.2rem;
+    margin-bottom: 48px;
+
+    && > * {
+      width: 140px;
+      height: 46px;
+    }
+    && button,
+    && > a {
+      font-size: 1.6rem;
+    }
+  }
+`;
+
+// Ghost button: transparent fill with a white border, for secondary actions
+export const GhostButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
   }
 `;
 

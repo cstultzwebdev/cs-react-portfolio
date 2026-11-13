@@ -6,7 +6,7 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
-import { ButtonRow, LeftSection } from './HeroStyles';
+import { ButtonRow, GhostButton, LeftSection } from './HeroStyles';
 
 const Hero = (props) => (
   <Section row nopadding>
@@ -24,12 +24,9 @@ const Hero = (props) => (
           }>
           Resume
         </Button>
-        <Button
-          onClick={() =>
-            (window.location = 'https://chrisstultzportfolio.netlify.app/')
-          }>
+        <GhostButton href='https://chrisstultzportfolio.netlify.app/'>
           Other Work
-        </Button>
+        </GhostButton>
       </ButtonRow>
     </LeftSection>
   </Section>
