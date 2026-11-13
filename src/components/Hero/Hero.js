@@ -6,7 +6,7 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+import { ButtonRow, LeftSection } from './HeroStyles';
 
 const Hero = (props) => (
   <Section row nopadding>
@@ -17,12 +17,20 @@ const Hero = (props) => (
       <SectionText>
         A showcase of relevant technologies I've worked with
       </SectionText>
-      <Button
-        onClick={() =>
-          (window.location = 'https://chrisstultzportfolio.netlify.app/')
-        }>
-        Other Work
-      </Button>
+      <ButtonRow>
+        <Button
+          onClick={() =>
+            window.open('/Chris-Stultz-Resume.pdf', '_blank', 'noopener')
+          }>
+          Resume
+        </Button>
+        <Button
+          onClick={() =>
+            (window.location = 'https://chrisstultzportfolio.netlify.app/')
+          }>
+          Other Work
+        </Button>
+      </ButtonRow>
     </LeftSection>
   </Section>
 );
